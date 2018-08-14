@@ -8,7 +8,7 @@ import com.naver.mycnex.viewpageapplication.Fragment.ViewP1Fragment;
 import com.naver.mycnex.viewpageapplication.Fragment.ViewP2Fragment;
 
 
-public class ViewPagerAdapter extends FragmentStatePagerAdapter {
+public class ViewPagerAdapter extends FragmentStatePagerAdapter{
     public ViewPagerAdapter(FragmentManager fm) {
         super(fm);
     }
@@ -26,6 +26,7 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
     @Override
     public int getCount()
     {
+
         return 2;
     }
 }

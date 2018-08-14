@@ -9,11 +9,10 @@
         android:id="@+id/fl_activity_main_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
-
-
         <Button
             android:id="@+id/btn"
-            android:layout_width="match_parent"
+            android:background="@drawable/menubar"
+            android:layout_width="40dp"
             android:layout_height="40dp" />
     </FrameLayout>
 

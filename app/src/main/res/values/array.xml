@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="address1">
+        <item>지역명</item>
+        <item>강남구</item>
+        <item>송파구</item>
+        <item>서초,방배</item>
+        <item>강동구</item>
+        <item>영등포구</item>
+        <item>강서구</item>
+        <item>동작구</item>
+        <item>양천구</item>
+        <item>관악구</item>
+        <item>구로,금천구</item>
+        <item>전체</item>
+    </string-array>
+
+    <string-array name="dogsize">
+        <item>사이즈</item>
+        <item>소형견</item>
+        <item>중형견</item>
+        <item>대형견</item>
+        <item>무관</item>
+        <item>전체</item>
+    </string-array>
+
+    <string-array name="place">
+        <item>전체</item>
+        <item>애견미용</item>
+        <item>동물병원</item>
+        <item>애견교육</item>
+        <item>애견숙박</item>
+        <item>애견장묘</item>
+        <item>애견놀이터</item>
+    </string-array>
+</resources>

@@ -17,7 +17,4 @@
         android:paddingBottom="20dp">
     </GridView>
 
-
-
-
 </LinearLayout>

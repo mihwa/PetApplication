@@ -1,5 +1,6 @@
 package com.naver.mycnex.viewpageapplication;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v4.widget.DrawerLayout;
 import android.os.Bundle;
@@ -65,20 +66,34 @@ public class SlideMenuActivity extends AppCompatActivity {
         @Override
         public void onItemClick(AdapterView<?> adapter, View view, int position, long id) {
             switch (position) {
-                case 0:
+                case 0://로그인/로그아웃
+                    Intent intent = new Intent(SlideMenuActivity.this, Login_Activity.class);
+                    startActivity(intent);
+                    finish();
 
                     flContainer.setBackgroundColor(Color.parseColor("#A52A2A"));
+
                     break;
 
-                case 1:
+                case 1://북마크
+                    intent = new Intent(SlideMenuActivity.this, Bookmark_Activity.class);
+                    startActivity(intent);
+                    finish();
+
                     flContainer.setBackgroundColor(Color.parseColor("#5F9EA0"));
                     break;
 
                 case 2:
+                    intent = new Intent(SlideMenuActivity.this, Login_Activity.class);
+                    startActivity(intent);
+                    finish();
                     flContainer.setBackgroundColor(Color.parseColor("#556B2F"));
                     break;
 
                 case 3:
+                    intent = new Intent(SlideMenuActivity.this, ShopInfo_Activity.class);
+                    startActivity(intent);
+                    finish();
                     flContainer.setBackgroundColor(Color.parseColor("#FF8C00"));
                     break;
                 /*case 4:
