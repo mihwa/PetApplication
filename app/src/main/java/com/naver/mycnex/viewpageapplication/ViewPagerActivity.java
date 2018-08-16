@@ -41,7 +41,7 @@ public class ViewPagerActivity extends AppCompatActivity {
     @BindView(R.id.btn_1)
     Button btn_1;
     @BindView(R.id.btn_openDrawer)
-    Button btn_openDrawer;              //메뉴버튼
+    Button btn_openDrawer;              //메뉴버튼~~~
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
