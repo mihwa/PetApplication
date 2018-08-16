@@ -15,7 +15,7 @@
         <item>전체</item>
     </string-array>
 
-    <string-array name="dogsize">
+    <string-array name="dogSize">
         <item>사이즈</item>
         <item>소형견</item>
         <item>중형견</item>
@@ -33,4 +33,11 @@
         <item>애견장묘</item>
         <item>애견놀이터</item>
     </string-array>
+
+    <string-array name="purpose">
+        <item>애견동반</item>
+        <item>애견전문</item>
+    </string-array>
+
+
 </resources>

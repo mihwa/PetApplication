@@ -29,7 +29,6 @@ public class ViewPagerActivity extends AppCompatActivity {
     Unbinder unbinder;
    // Button btn_0;
 
-
     @BindView(R.id.viewpager)
     ViewPager viewpager;
     @BindView(R.id.spinner0)
@@ -62,7 +61,7 @@ public class ViewPagerActivity extends AppCompatActivity {
         addressAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner0.setAdapter(addressAdapter);
 
-        ArrayAdapter dogsizeAdapter = ArrayAdapter.createFromResource(this, R.array.dogsize, android.R.layout.simple_spinner_item);
+        ArrayAdapter dogsizeAdapter = ArrayAdapter.createFromResource(this, R.array.dogSize, android.R.layout.simple_spinner_item);
         dogsizeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner1.setAdapter(dogsizeAdapter);
 
@@ -79,9 +78,11 @@ public class ViewPagerActivity extends AppCompatActivity {
     /********** OnClick **********/
     @OnClick(R.id.btn_openDrawer)    //드로어 레이아웃
     public void btn_openDrawer(){
-        /*Intent intent = new Intent(ViewPagerActivity.this, SlideMenuActivity.class);
-        startActivity(intent);
-        finish();*/
+        /*
+            Intent intent = new Intent(ViewPagerActivity.this, SlideMenuActivity.class);
+            startActivity(intent);
+            finish();
+        */
     }
     @OnClick (R.id.btn_0)   //ViewPager 좌측이동
     public void btn_0(){
@@ -101,8 +102,6 @@ public class ViewPagerActivity extends AppCompatActivity {
         Intent intent = new Intent(ViewPagerActivity.this, SearchMapActivity.class);
         startActivity(intent);
     }
-
-
 
     /** onDestroy **/
     @Override
