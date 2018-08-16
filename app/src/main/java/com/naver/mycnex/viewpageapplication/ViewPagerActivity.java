@@ -45,7 +45,7 @@ public class ViewPagerActivity extends AppCompatActivity {
     Button btn_openDrawer;
     @BindView(R.id.btnSrchText) //키워드 검색버튼
     ImageButton btnSrchText;
-    @BindView(R.id.btnSrchMap)  //맵 검색버튼   asdfasdf
+    @BindView(R.id.btnSrchMap)  //맵 검색버튼  sdsfdsfdsfdsfdsfdsfdsfd
     ImageButton btnSrchMap;
 
 
