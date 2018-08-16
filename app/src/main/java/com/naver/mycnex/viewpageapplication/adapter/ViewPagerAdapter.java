@@ -22,11 +22,8 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter{
         }
         return null;
     }
-
     @Override
-    public int getCount()
-    {
-
+    public int getCount() {
         return 2;
     }
 }

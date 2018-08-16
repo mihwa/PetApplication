@@ -25,12 +25,14 @@
                 android:text="지역"/>
 
             <ImageButton
+                android:id="@+id/btnSrchText"
                 android:layout_marginLeft="110dp"
                 android:background="@drawable/ic_search"
                 android:layout_width="35dp"
                 android:layout_height="35dp" />
 
             <ImageButton
+                android:id="@+id/btnSrchMap"
                 android:layout_marginLeft="20dp"
                 android:background="@drawable/ic_map_alt"
                 android:layout_width="35dp"
