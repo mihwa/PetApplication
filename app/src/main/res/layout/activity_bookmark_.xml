@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Bookmark_Activity">
+    tools:context=".BookmarkList_Activity">
 
     <LinearLayout
         android:background="@color/colorDarkHeader"
@@ -29,6 +29,7 @@
         android:layout_height="221dp"
         android:orientation="vertical">
         <ImageView
+
             android:background="@drawable/ic_object"
             android:layout_width="100dp"
             android:layout_height="100dp"

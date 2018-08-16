@@ -22,7 +22,7 @@ public class SlideMenuActivity extends AppCompatActivity {
 
 
 
-    @Override
+  /*  @Override
     public void onBackPressed() {
         if (dlDrawer.isDrawerOpen(lvNavList)) {
             dlDrawer.closeDrawer(lvNavList);
@@ -32,7 +32,7 @@ public class SlideMenuActivity extends AppCompatActivity {
 
         }
 
-    }
+    }*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,7 +67,7 @@ public class SlideMenuActivity extends AppCompatActivity {
         public void onItemClick(AdapterView<?> adapter, View view, int position, long id) {
             switch (position) {
                 case 0://로그인/로그아웃
-                    Intent intent = new Intent(SlideMenuActivity.this, Login_Activity.class);
+                    Intent intent = new Intent(SlideMenuActivity.this, LoginActivity.class);
                     startActivity(intent);
                     finish();
 
@@ -76,22 +76,22 @@ public class SlideMenuActivity extends AppCompatActivity {
                     break;
 
                 case 1://북마크
-                    intent = new Intent(SlideMenuActivity.this, Bookmark_Activity.class);
+                    intent = new Intent(SlideMenuActivity.this, BookmarkList_Activity.class);
                     startActivity(intent);
                     finish();
 
                     flContainer.setBackgroundColor(Color.parseColor("#5F9EA0"));
                     break;
 
-                case 2:
-                    intent = new Intent(SlideMenuActivity.this, Login_Activity.class);
+                case 2://설정
+                    intent = new Intent(SlideMenuActivity.this, SettingActivity.class);
                     startActivity(intent);
                     finish();
                     flContainer.setBackgroundColor(Color.parseColor("#556B2F"));
                     break;
 
-                case 3:
-                    intent = new Intent(SlideMenuActivity.this, ShopInfo_Activity.class);
+                case 3://가게등록
+                    intent = new Intent(SlideMenuActivity.this, RegisterShopActivity.class);
                     startActivity(intent);
                     finish();
                     flContainer.setBackgroundColor(Color.parseColor("#FF8C00"));
