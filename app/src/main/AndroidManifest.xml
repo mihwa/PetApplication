@@ -31,13 +31,14 @@
         <activity android:name=".ShopListActivity"/>
         <activity android:name=".ShopInfo_Activity" />
         <activity android:name=".SlideMenuActivity" />
-        <activity android:name=".ViewPagerActivity" />
-        <activity android:name=".IntroActivity">
+        <activity android:name=".ViewPagerActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".IntroActivity">
 
        </activity>
     </application>

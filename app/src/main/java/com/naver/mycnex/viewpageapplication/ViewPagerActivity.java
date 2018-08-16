@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 
 import com.naver.mycnex.viewpageapplication.Bus.BusProvider;
@@ -16,6 +17,7 @@ import com.squareup.otto.Bus;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import butterknife.Unbinder;
 
 
@@ -26,7 +28,6 @@ public class ViewPagerActivity extends AppCompatActivity {
     Bus bus = BusProvider.getInstance().getBus();
     Unbinder unbinder;
    // Button btn_0;
-
 
     @BindView(R.id.viewpager)
     ViewPager viewpager;
@@ -40,8 +41,14 @@ public class ViewPagerActivity extends AppCompatActivity {
     Button btn_0;
     @BindView(R.id.btn_1)
     Button btn_1;
-    @BindView(R.id.btn_openDrawer)
+    @BindView(R.id.btn_openDrawer) //메뉴버튼
     Button btn_openDrawer;
+    @BindView(R.id.btnSrchText) //키워드 검색버튼
+    ImageButton btnSrchText;
+    @BindView(R.id.btnSrchMap)  //맵 검색버튼
+    ImageButton btnSrchMap;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +61,7 @@ public class ViewPagerActivity extends AppCompatActivity {
         addressAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner0.setAdapter(addressAdapter);
 
-        ArrayAdapter dogsizeAdapter = ArrayAdapter.createFromResource(this, R.array.dogsize, android.R.layout.simple_spinner_item);
+        ArrayAdapter dogsizeAdapter = ArrayAdapter.createFromResource(this, R.array.dogSize, android.R.layout.simple_spinner_item);
         dogsizeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner1.setAdapter(dogsizeAdapter);
 
@@ -65,40 +72,38 @@ public class ViewPagerActivity extends AppCompatActivity {
         viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         viewpager.setAdapter(viewPagerAdapter);
 
-
-        btn_0.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                viewpager.setCurrentItem(0);
-            }
-        });
-        btn_1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                viewpager.setCurrentItem(1);
-            }
-        });
-        
-        btn_openDrawer.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ViewPagerActivity.this, SlideMenuActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-
-
-        /*@BindView(R.id.btn_1) Button btn_1;
-        @OnClick
-        public void btn_1() {
-            viewpager.setCurrentItem(1);
-
-        }*/
-
-
     }
 
+
+    /********** OnClick **********/
+    @OnClick(R.id.btn_openDrawer)    //드로어 레이아웃
+    public void btn_openDrawer(){
+        /*
+            Intent intent = new Intent(ViewPagerActivity.this, SlideMenuActivity.class);
+            startActivity(intent);
+            finish();
+        */
+    }
+    @OnClick (R.id.btn_0)   //ViewPager 좌측이동
+    public void btn_0(){
+        viewpager.setCurrentItem(0);
+    }
+    @OnClick (R.id.btn_1)   //ViewPager 우측이동
+    public void btn_1(){
+        viewpager.setCurrentItem(1);
+    }
+    @OnClick(R.id.btnSrchText)  // SearchKeywordActivity ( 검색어로 찾기 ) 로 이동
+    public void btnSrchText(){
+        Intent intent = new Intent(ViewPagerActivity.this, SearchKeywordActivity.class);
+        startActivity(intent);
+    }
+    @OnClick(R.id.btnSrchMap)   // SearchMapActivity ( 맵에서 찾기 ) 로 이동
+    public void btnSrchMap(){
+        Intent intent = new Intent(ViewPagerActivity.this, SearchMapActivity.class);
+        startActivity(intent);
+    }
+
+    /** onDestroy **/
     @Override
     protected void onDestroy() {
         super.onDestroy();

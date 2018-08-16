@@ -1,108 +1,149 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    >
+    android:orientation="vertical">
 
+    <!-- Wrap ( 메뉴버튼 제외 )-->
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="검색지역"/>
 
+        <!-- 헤더 ( 상단 )  -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorAccent">
-            <Spinner
-                android:id="@+id/spinner0"
-                android:layout_width="155dp"
-                android:layout_height="50dp"
-                android:text="지역"/>
 
-            <ImageButton
-                android:layout_marginLeft="110dp"
-                android:background="@drawable/ic_search"
-                android:layout_width="35dp"
-                android:layout_height="35dp" />
+            <!-- 좌측 ( 검색지역 )-->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:text="검색지역"
+                    android:textSize="10dp"/>
+                <Spinner
+                    android:id="@+id/spinner0"
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"/>
+            </LinearLayout>
 
-            <ImageButton
-                android:layout_marginLeft="20dp"
-                android:background="@drawable/ic_map_alt"
-                android:layout_width="35dp"
-                android:layout_height="35dp" />
-
+            <!-- 우측 ( 검색버튼 )-->
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <!-- 돋보기 -->
+                    <ImageButton
+                        android:id="@+id/btnSrchText"
+                        android:background="@drawable/ic_search"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp" />
+                    <!-- 맵 -->
+                    <ImageButton
+                        android:id="@+id/btnSrchMap"
+                        android:background="@drawable/ic_map_alt"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp" />
+                </LinearLayout>
+            </RelativeLayout>
         </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:background="@color/colorDarkHeader"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/btn_0"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            android:layout_weight="1"
-            android:text="애견동반" />
-
-        <Button
-            android:id="@+id/btn_1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/colorAccent"
-            android:layout_weight="1"
-            android:text="애견전문" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="66dp"
-        android:background="@color/colorDarkHeader"
-        android:gravity="center">
-
+        <!-- 헤더 ( 상단 )  -->
+        <!-- 헤더 ( 중단 )  -->
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/colorAccent"
-            android:layout_marginRight="20dp">
-
-            <Spinner
-                android:id="@+id/spinner1"
-                android:layout_width="155dp"
-                android:layout_height="50dp"/>
-        </LinearLayout>
-
-       <LinearLayout
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:background="@color/colorAccent">
-        <Spinner
-            android:id="@+id/spinner2"
-            android:layout_width="155dp"
+            android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="전체~"/>
-
-       </LinearLayout>
+            android:background="@color/colorDarkHeader"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btn_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:layout_weight="1"
+                android:text="애견동반" />
+            <Button
+                android:id="@+id/btn_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                android:layout_weight="1"
+                android:text="애견전문" />
+        </LinearLayout>
+        <!-- 헤더 ( 중단 )  -->
+        <!-- 헤더 ( 하단 )  -->
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorDarkHeader">
+        <!-- 견사이즈 -->
+        <RelativeLayout
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <!-- Spinner -->
+            <LinearLayout
+                android:background="@color/colorWhite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Spinner
+                    android:id="@+id/spinner1"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <!-- 장소구분 -->
+        <RelativeLayout
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <!-- Spinner -->
+            <LinearLayout
+                android:background="@color/colorWhite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Spinner
+                    android:id="@+id/spinner2"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"/>
+            </LinearLayout>
+        </RelativeLayout>
     </LinearLayout>
+        <!-- 헤더 ( 하단 )  -->
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/viewpager"
-        android:layout_width="wrap_content"
-        android:layout_height="380dp" />
+        <!-- 뷰페이저 -->
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="0dp" />
+        <!-- 뷰페이저 -->
+    </LinearLayout>
+    <!-- Wrap -->
+
+    <!-- 메뉴버튼 -->
     <Button
         android:id="@+id/btn_openDrawer"
-        android:layout_gravity="right"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"
         android:background="@drawable/menubar"
-        android:layout_width="60dp"
-        android:layout_height="60dp" />
-    </LinearLayout>
-
-</LinearLayout>
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="59dp"
+        android:layout_height="64dp" />
+</RelativeLayout>

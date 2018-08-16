@@ -8,7 +8,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.RelativeLayout;
 
-
+//INTRO ( 시작화면 )
 public class IntroActivity extends AppCompatActivity {
     RelativeLayout layout_images;
 
@@ -22,22 +22,15 @@ public class IntroActivity extends AppCompatActivity {
         Animation anim = AnimationUtils.loadAnimation(IntroActivity.this, R.anim.anim_fade_in);
         anim.setAnimationListener(new Animation.AnimationListener() {
             @Override
-            public void onAnimationStart(Animation animation) {
-
-            }
-
+            public void onAnimationStart(Animation animation) {}
             @Override
             public void onAnimationEnd(Animation animation) {
                 Intent intent = new Intent(IntroActivity.this, ViewPagerActivity.class);
                 startActivity(intent);
                 finish();
-                Log.d("cmh","제발!!");
             }
-
             @Override
-            public void onAnimationRepeat(Animation animation) {
-
-            }
+            public void onAnimationRepeat(Animation animation) {}
         });
         layout_images.startAnimation(anim);
     }

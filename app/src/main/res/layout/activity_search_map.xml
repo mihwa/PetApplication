@@ -1,9 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SearchMapActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <!-- Wrap -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- 헤더 ( 상단 )  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent">
+            <!-- 좌측 ( 검색지역 )-->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:text="검색지역"
+                    android:textSize="10dp"/>
+                <Spinner
+                    android:id="@+id/spinner0"
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"/>
+            </LinearLayout>
+
+            <!-- 우측 ( 검색버튼 )-->
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <!-- 돋보기 -->
+                    <ImageButton
+                        android:id="@+id/btnSrchText"
+                        android:background="@drawable/ic_search"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp" />
+                    <!-- 맵 -->
+                    <ImageButton
+                        android:id="@+id/btnSrchMap"
+                        android:background="@drawable/ic_map_alt"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+        <!-- 헤더 ( 상단 )  -->
+        <!-- 헤더 ( 하단 ) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+
+            <!-- TOTO : 작성해야함 -->
+
+
+        </LinearLayout>
+        <!-- 헤더 ( 하단 ) -->
+
+        <!-- 구글맵 -->
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+</RelativeLayout>

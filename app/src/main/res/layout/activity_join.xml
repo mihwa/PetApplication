@@ -6,78 +6,132 @@
     android:layout_height="match_parent"
     tools:context=".JoinActivity">
 
+    <!-- Wrap -->
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:orientation="vertical"
-        android:paddingTop="30dp">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!-- 헤더 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <!-- 뒤로가기 -->
+            <ImageButton
+                android:id="@+id/btnGoBack"
+                android:src="@drawable/ic_left"
+                android:scaleType="fitCenter"
+                android:background="@null"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+            <!-- 제목 -->
+            <TextView
+                android:text="회원가입"
+                android:textSize="15dp"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <!-- 헤더 -->
 
-        <ImageView
-            android:layout_gravity="center_horizontal"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:background="@drawable/chracter"
-            android:layout_marginBottom="30dp"
-            />
-
-        <EditText
-            android:id="@+id/id_edit"
-            android:layout_width="200dp"
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="아이디"
-            android:background="@drawable/edittext"
-            android:layout_marginBottom="10dp"
-            android:gravity="center"
-            android:inputType="textNoSuggestions"/>
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="30dp">
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/chracter"
+                android:layout_marginBottom="30dp"/>
 
-        <EditText
-            android:id="@+id/nickname_edit"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:hint="닉네임"
-            android:background="@drawable/edittext"
-            android:layout_marginBottom="10dp"
-            android:gravity="center"
-            android:inputType="textNoSuggestions"/>
+            <!--개인 / 업체 -->
+            <LinearLayout
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+                <RelativeLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+                    <!-- 개인 -->
+                    <Button
+                        android:id="@+id/individual"
+                        android:text="개인"
+                        android:background="@color/colorPrimaryButtonOn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+                    <!-- 업체 -->
+                    <Button
+                        android:id="@+id/company"
+                        android:text="업체"
+                        android:background="@color/colorWhite"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </RelativeLayout>
+            </LinearLayout>
 
-        <EditText
-            android:id="@+id/email_edit"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:hint="이메일"
-            android:background="@drawable/edittext"
-            android:layout_marginBottom="10dp"
-            android:gravity="center"
-            android:inputType="textNoSuggestions"/>
-
-        <EditText
-            android:id="@+id/pw_edit"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:hint="비밀번호"
-            android:background="@drawable/edittext"
-            android:layout_marginBottom="10dp"
-            android:gravity="center"
-            android:inputType="textNoSuggestions"/>
-
-        <EditText
-            android:id="@+id/pw2_edit"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:hint="비밀번호 확인"
-            android:background="@drawable/edittext"
-            android:layout_marginBottom="10dp"
-            android:gravity="center"
-            android:inputType="textNoSuggestions"/>
-
-        <Button
-            android:id="@+id/join_finish_btn"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:text="가입하기"
-            />
-
+            <EditText
+                android:id="@+id/id_edit"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:hint="아이디"
+                android:background="@drawable/edittext"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:inputType="textNoSuggestions"/>
+            <EditText
+                android:id="@+id/nickname_edit"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:hint="닉네임"
+                android:background="@drawable/edittext"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:inputType="textNoSuggestions"/>
+            <EditText
+                android:id="@+id/email_edit"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:hint="이메일"
+                android:background="@drawable/edittext"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:inputType="textNoSuggestions"/>
+            <EditText
+                android:id="@+id/pw_edit"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:hint="비밀번호"
+                android:background="@drawable/edittext"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:inputType="textNoSuggestions"/>
+            <EditText
+                android:id="@+id/pw2_edit"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:hint="비밀번호 확인"
+                android:background="@drawable/edittext"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:inputType="textNoSuggestions"/>
+            <Button
+                android:id="@+id/join_finish_btn"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="가입하기"
+                />
+        </LinearLayout>
     </LinearLayout>
+
+
+
 
 </RelativeLayout>
