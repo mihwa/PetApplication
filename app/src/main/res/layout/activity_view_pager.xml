@@ -84,46 +84,46 @@
         <!-- 헤더 ( 중단 )  -->
         <!-- 헤더 ( 하단 )  -->
         <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorDarkHeader">
-        <!-- 견사이즈 -->
-        <RelativeLayout
-            android:padding="10dp"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent">
-            <!-- Spinner -->
-            <LinearLayout
-                android:background="@color/colorWhite"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <Spinner
-                    android:id="@+id/spinner1"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:layout_height="35dp"/>
-            </LinearLayout>
-        </RelativeLayout>
-        <!-- 장소구분 -->
-        <RelativeLayout
-            android:padding="10dp"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent">
-            <!-- Spinner -->
-            <LinearLayout
-                android:background="@color/colorWhite"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <Spinner
-                    android:id="@+id/spinner2"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:layout_height="35dp"/>
-            </LinearLayout>
-        </RelativeLayout>
-    </LinearLayout>
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorDarkHeader">
+            <!-- 견사이즈 -->
+            <RelativeLayout
+                android:padding="10dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <!-- Spinner -->
+                <LinearLayout
+                    android:background="@color/colorWhite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <Spinner
+                        android:id="@+id/spinner1"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"/>
+                </LinearLayout>
+            </RelativeLayout>
+            <!-- 장소구분 -->
+            <RelativeLayout
+                android:padding="10dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <!-- Spinner -->
+                <LinearLayout
+                    android:background="@color/colorWhite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <Spinner
+                        android:id="@+id/spinner2"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
         <!-- 헤더 ( 하단 )  -->
 
         <!-- 뷰페이저 -->
@@ -146,4 +146,5 @@
         android:layout_alignParentRight="true"
         android:layout_width="59dp"
         android:layout_height="64dp" />
+
 </RelativeLayout>
