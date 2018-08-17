@@ -23,7 +23,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".SettingActivity" />
-        <activity android:name=".ChangeAccountActivity" />
         <activity android:name=".SearchMapActivity" />
         <activity android:name=".SearchKeywordActivity" />
         <activity android:name=".BookmarkList_Activity" />
@@ -33,9 +32,6 @@
         </activity>
         <activity android:name=".ShopListActivity" />
         <activity android:name=".ShopInfo_Activity" />
-        <activity android:name=".SlideMenuActivity">
-
-        </activity>
         <activity android:name=".ViewPagerActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
