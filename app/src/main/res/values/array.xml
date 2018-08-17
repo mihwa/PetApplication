@@ -39,5 +39,10 @@
         <item>애견전문</item>
     </string-array>
 
+    <string-array name="phoneNumSelect">
+        <item>010</item>
+        <item>02</item>
+    </string-array>
+
 
 </resources>

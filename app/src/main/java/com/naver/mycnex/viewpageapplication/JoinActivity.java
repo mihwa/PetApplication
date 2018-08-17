@@ -1,10 +1,15 @@
 package com.naver.mycnex.viewpageapplication;
 
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import butterknife.BindView;
@@ -33,13 +38,11 @@ public class JoinActivity extends AppCompatActivity {
             Toast.makeText(JoinActivity.this,"아이디를 입력하세요",Toast.LENGTH_SHORT).show();
             return;
         }
-
         if (id.equals("admin")) {
             id_edit.requestFocus();
             Toast.makeText(JoinActivity.this,"이미 사용중인 아이디입니다",Toast.LENGTH_SHORT).show();
             return;
         }
-
         String nickname = nickname_edit.getText().toString();
 
         if (nickname.equals("") || nickname == null) {
@@ -47,7 +50,6 @@ public class JoinActivity extends AppCompatActivity {
             Toast.makeText(JoinActivity.this,"닉네임을 입력하세요",Toast.LENGTH_SHORT).show();
             return;
         }
-
         String email = email_edit.getText().toString();
 
         if (email.equals("") || email == null) {
@@ -86,5 +88,6 @@ public class JoinActivity extends AppCompatActivity {
     @BindView(R.id.pw2_edit) EditText pw2_edit;
     @BindView(R.id.email_edit) EditText email_edit;
     @BindView(R.id.join_finish_btn) Button join_finish_btn;
+
 
 }
