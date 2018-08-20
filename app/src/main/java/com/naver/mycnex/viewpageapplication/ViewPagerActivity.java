@@ -30,8 +30,9 @@ import butterknife.Unbinder;
 
 public class ViewPagerActivity extends AppCompatActivity {
 
-
-    //???
+    // 2018.08.21
+    // 01:24
+    // 배은식
 
     ViewPagerAdapter viewPagerAdapter;
     Bus bus = BusProvider.getInstance().getBus();
