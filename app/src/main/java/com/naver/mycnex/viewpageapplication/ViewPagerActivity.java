@@ -30,6 +30,9 @@ import butterknife.Unbinder;
 
 public class ViewPagerActivity extends AppCompatActivity {
 
+
+    //???
+
     ViewPagerAdapter viewPagerAdapter;
     Bus bus = BusProvider.getInstance().getBus();
     Unbinder unbinder;
