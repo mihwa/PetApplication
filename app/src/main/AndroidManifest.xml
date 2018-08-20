@@ -23,24 +23,28 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".SettingActivity" />
-        <activity android:name=".ChangeAccountActivity" />
         <activity android:name=".SearchMapActivity" />
         <activity android:name=".SearchKeywordActivity" />
         <activity android:name=".BookmarkList_Activity" />
-        <activity android:name=".RegisterShopActivity" />
-        <activity android:name=".ShopListActivity"/>
+        <activity android:name=".RegisterShopActivity" >
+
+
+        </activity>
+        <activity android:name=".ShopListActivity" />
         <activity android:name=".ShopInfo_Activity" />
-        <activity android:name=".SlideMenuActivity" />
-        <activity android:name=".ViewPagerActivity" >
+        <activity android:name=".ViewPagerActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".IntroActivity">
+        <activity android:name=".IntroActivity"></activity>
+        <activity android:name=".JoinActivity">
 
-       </activity>
+        </activity>
+        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".GetAddressActivity"></activity>
     </application>
 
 </manifest>

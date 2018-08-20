@@ -6,117 +6,416 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".RegisterShopActivity">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="가게이름"/>
-    <EditText
-        android:id="@+id/shop_name"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:hint=""
-        android:background="@drawable/edittext"
-        android:layout_marginBottom="10dp"
-        android:gravity="center"
-        android:inputType="textNoSuggestions"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="주소"/>
-    <EditText
-        android:id="@+id/shop_address"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:hint=""
-        android:background="@drawable/edittext"
-        android:layout_marginBottom="10dp"
-        android:gravity="center"
-        android:inputType="textNoSuggestions"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="입장가능한 반려견 크기"/>
-    <EditText
-        android:id="@+id/dog_size"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:hint=""
-        android:background="@drawable/edittext"
-        android:layout_marginBottom="10dp"
-        android:gravity="center"
-        android:inputType="textNoSuggestions"/>
+    <!-- 헤더 -->
+    <RelativeLayout
+        android:background="#5e5e5e"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!-- 뒤로가기 -->
+            <ImageButton
+                android:id="@+id/btnGoBack"
+                android:src="@drawable/ic_left"
+                android:scaleType="fitCenter"
+                android:background="@null"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+            <!-- 제목 -->
+            <TextView
+                android:text="내 가게 추가"
+                android:textColor="@color/colorWhite"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <!-- 헤더 -->
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="영업일/영업시간"/>
-    <EditText
-        android:id="@+id/shop_openhour"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:hint=""
-        android:background="@drawable/edittext"
-        android:layout_marginBottom="10dp"
-        android:gravity="center"
-        android:inputType="textNoSuggestions"/>
+    <!-- 내용 -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:paddingTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="예약여부"/>
-    <EditText
-        android:id="@+id/check_reserve"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:hint=""
-        android:background="@drawable/edittext"
-        android:layout_marginBottom="10dp"
-        android:gravity="center"
-        android:inputType="textNoSuggestions"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="전화번호"/>
-    <EditText
-        android:id="@+id/shop_phoneNum"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:hint=""
-        android:background="@drawable/edittext"
-        android:layout_marginBottom="10dp"
-        android:gravity="center"
-        android:inputType="textNoSuggestions"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="주차여부"/>
-    <EditText
-        android:id="@+id/check_parking"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:hint=""
-        android:background="@drawable/edittext"
-        android:layout_marginBottom="10dp"
-        android:gravity="center"
-        android:inputType="textNoSuggestions"/>
+        <LinearLayout
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_width="300dp"
+            android:layout_height="match_parent">
+            <!-- 가게이름 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="가게이름"/>
+            <EditText
+                android:id="@+id/shop_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:inputType="textNoSuggestions"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="사진첨부"/>
-    <EditText
-        android:id="@+id/add_photo"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:hint=""
-        android:background="@drawable/edittext"
-        android:layout_marginBottom="10dp"
-        android:gravity="center"
-        android:inputType="textNoSuggestions"/>
-    <Button
-        android:id="@+id/btn_save"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="저장"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="주소"/>
+            <!-- 가게이름 -->
+            <!-- 주소 버튼-->
+            <Button
+                android:id="@+id/btn_shop_address"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/edittext"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:inputType="textNoSuggestions"/>
+            <!-- 주소 EditText -->
+            <!-- 주소 세팅시킬 시에 editText.setEnabled(false); 해야함 -->
+            <EditText
+                android:id="@+id/shop_address"
+                android:visibility="gone"
+                android:background="@drawable/edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- 반려견 크기 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="입장가능한 반려견 크기"/>
+            <LinearLayout
+                android:weightSum="3"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:background="@drawable/edittext"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:inputType="textNoSuggestions">
+                <Button
+                    android:text="소형견"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:text="~ 중형견"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:text="~ 대형견"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <!-- 반려견 크기 -->
+
+            <!-- 영업일 / 영업시간 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="영업일/영업시간"/>
+            <LinearLayout
+                android:weightSum="7"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:background="@drawable/edittext"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:inputType="textNoSuggestions">
+                <!-- 요일버튼 박스 -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:id="@+id/btnMonday"
+                        android:text="월"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" />
+                    <Button
+                        android:id="@+id/btnTuesday"
+                        android:text="화"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" />
+                    <Button
+                        android:id="@+id/btnWednesday"
+                        android:text="수"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" />
+                    <Button
+                        android:id="@+id/btnThursday"
+                        android:text="목"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" />
+                    <Button
+                        android:id="@+id/btnFriday"
+                        android:text="금"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" />
+                    <Button
+                        android:id="@+id/btnSaturday"
+                        android:text="토"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" />
+                    <Button
+                        android:id="@+id/btnSunday"
+                        android:text="일"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <!-- 요일버튼 박스 -->
+
+                <!-- 시간선택 박스 -->
+                <LinearLayout
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!--TODO 작성해야함-->
+                    <!--TimePicker-->
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+                        <EditText
+                            android:id="@+id/startTime"
+                            android:textAlignment="center"
+                            android:background="@drawable/edittext"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp" />
+                    </LinearLayout>
+                    <RelativeLayout
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:text="~"
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+                        <EditText
+                            android:id="@+id/endTime"
+                            android:background="@drawable/edittext"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <!-- 시간선택 박스 -->
+            </LinearLayout>
+            <!-- 영업일 / 영업시간 -->
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="예약여부"/>
+            <LinearLayout
+                android:weightSum="7"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:background="@drawable/edittext"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:inputType="textNoSuggestions">
+
+                <!--개인 / 업체 -->
+                <LinearLayout
+                    android:id="@+id/reserveBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+                        <!-- 예약가능 -->
+                        <Button
+                            android:id="@+id/btnReserveOk"
+                            android:text="예약가능"
+                            android:textColor="@color/colorWhite"
+                            android:background="@drawable/button_left_green"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+                        <!-- 예약불가 -->
+                        <Button
+                            android:id="@+id/btnReserveNo"
+                            android:text="예약불가"
+                            android:background="@drawable/button_right_white"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 전화번호 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="전화번호"/>
+            <LinearLayout
+                android:weightSum="7"
+                android:orientation="horizontal"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:padding="5dp"
+                android:background="@drawable/edittext"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:inputType="textNoSuggestions">
+                <!-- 02 / 010 -->
+                <Spinner
+                    android:id="@+id/phoneNumSelect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2" />
+                <RelativeLayout
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:text="-"
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+                <EditText
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/edittext"
+                    android:layout_weight="3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent" />
+                <RelativeLayout
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:text="-"
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+                <EditText
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/edittext"
+                    android:layout_weight="3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+            <!-- 전화번호 -->
+
+            <!-- 주차여부 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="주차여부"/>
+            <LinearLayout
+                android:weightSum="3"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:background="@drawable/edittext"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:inputType="textNoSuggestions">
+                <Button
+
+                    android:text="주차가능"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:text="발렛주차"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:text="주차불가"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <!-- 주차여부 -->
+
+            <!-- 사진첨부 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="사진첨부"/>
+
+            <!-- 사진 스크롤 뷰 -->
+            <HorizontalScrollView
+                android:id="@+id/photoScroll"
+                android:background="@drawable/edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:weightSum="3"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:inputType="textNoSuggestions">
+
+                    <!-- + 버튼 및 아이템 레이아웃 -->
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="100dp">
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+                    <!-- + 버튼 및 아이템 레이아웃 -->
+
+
+                </LinearLayout>
+            </HorizontalScrollView>
+            <!-- 사진 스크롤 뷰 -->
+
+            <!-- 사진첨부 -->
+
+            <!-- 등록버튼 -->
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="저장"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
 
 </LinearLayout>

@@ -13,23 +13,30 @@
         android:layout_height="wrap_content">
         <!-- 헤더 -->
         <RelativeLayout
+            android:background="#5e5e5e"
             android:layout_width="match_parent"
             android:layout_height="50dp">
-            <!-- 뒤로가기 -->
-            <ImageButton
-                android:id="@+id/btnGoBack"
-                android:src="@drawable/ic_left"
-                android:scaleType="fitCenter"
-                android:background="@null"
-                android:layout_width="50dp"
-                android:layout_height="50dp" />
-            <!-- 제목 -->
-            <TextView
-                android:text="회원가입"
-                android:textSize="15dp"
-                android:layout_centerInParent="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <!-- 뒤로가기 -->
+                <ImageButton
+                    android:id="@+id/btnGoBack"
+                    android:src="@drawable/ic_left"
+                    android:scaleType="fitCenter"
+                    android:background="@null"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp" />
+                <!-- 제목 -->
+                <TextView
+                    android:text="내 가게 추가"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
         </RelativeLayout>
         <!-- 헤더 -->
 
@@ -46,36 +53,7 @@
                 android:background="@drawable/chracter"
                 android:layout_marginBottom="30dp"/>
 
-            <!--개인 / 업체 -->
-            <LinearLayout
-                android:layout_marginBottom="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="40dp">
-                <RelativeLayout
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent">
-                    <!-- 개인 -->
-                    <Button
-                        android:id="@+id/individual"
-                        android:text="개인"
-                        android:background="@color/colorPrimaryButtonOn"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" />
-                </RelativeLayout>
-                <RelativeLayout
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent">
-                    <!-- 업체 -->
-                    <Button
-                        android:id="@+id/company"
-                        android:text="업체"
-                        android:background="@color/colorWhite"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" />
-                </RelativeLayout>
-            </LinearLayout>
+
 
             <EditText
                 android:id="@+id/id_edit"
