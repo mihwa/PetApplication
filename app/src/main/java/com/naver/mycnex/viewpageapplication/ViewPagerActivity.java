@@ -48,7 +48,7 @@ public class ViewPagerActivity extends AppCompatActivity {
     @BindView(R.id.btnSrchMap)  //맵 검색버튼
     ImageButton btnSrchMap;
 
-
+    //테스트커밋
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
